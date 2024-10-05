@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Ayush Nitin Chaudhari - Portfolio</title>
+    <style>
+        /* General styling */
+        .hidden-form {
+            display: none;
+        }
+
+        .show-form {
+            display: block;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+
+        form {
+            margin: 20px 0;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Ayush Nitin Chaudhari</h1>
+            <img src="M:\ASUS\Downloads\ayush.jpg" alt="Ayush Nitin Chaudhari" class="profile-photo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Full Stack Developer</p>
+        <p>Education: 3rd Year, BE Computer, SPPU</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Ayush Nitin Chaudhari, a 3rd year student of Computer Engineering at LoGMIEER College. My passion for technology began early, and I've developed a strong foundation in programming, especially in Python.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Bouncing Ball in Computer Graphics</h3>
+            <p>This mini project demonstrates a simple animation of a bouncing ball using OpenGL in C++. It showcases my understanding of basic graphics concepts and event handling.</p>
+        </div>
+        <div class="project">
+            <h3>Snake Game in C++</h3>
+            <p>A classic Snake game developed in C++. This project helped me to improve my skills in game development and reinforce my understanding of data structures and algorithms.</p>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <article class="blog-article">
+            <h3>Embracing Python: My Journey in Programming</h3>
+            <p>Date: 2024-01-15</p>
+            <p>As a 3rd-year Computer Engineering student, I have found Python to be an invaluable tool in my toolkit. From my first "Hello, World!" to building complex applications, Python has allowed me to explore various domains including web development and data analysis.</p>
+        </article>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <button class="button" onclick="toggleForm('contact-form')">
+            <i class="fas fa-envelope"></i> Contact Form
+        </button>
+        <button class="button" onclick="toggleForm('feedback-form')">
+            <i class="fas fa-comments"></i> Feedback Form
+        </button>
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="hidden-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
+
+        <!-- Feedback Form -->
+        <form id="feedback-form" class="hidden-form">
+            <label for="feedback-name">Name:</label>
+            <input type="text" id="feedback-name" name="feedback-name" required>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Feedback
+            </button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Connect with me on 
+            <a href="https://www.linkedin.com/in/ayush-chaudhari-110819236" target="_blank" class="footer-link">LinkedIn</a> and 
+            <a href="https://github.com/anonayushymous" target="_blank" class="footer-link">GitHub</a>.
+        </p>
+    </footer>
+
+    <script>
+        function toggleForm(formId) {
+            const contactForm = document.getElementById('contact-form');
+            const feedbackForm = document.getElementById('feedback-form');
+
+            // Hide both forms first
+            contactForm.classList.add('hidden-form');
+            feedbackForm.classList.add('hidden-form');
+
+            // Toggle the selected form
+            if (formId === 'contact-form') {
+                contactForm.classList.toggle('hidden-form');
+            } else if (formId === 'feedback-form') {
+                feedbackForm.classList.toggle('hidden-form');
+            }
+        }
+    </script>
+</body>
+</html>
